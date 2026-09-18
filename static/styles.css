@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #7e7777;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+.container {
+    width: 50%;
+    background: #222;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.15);
+}
+
+/* Align inputs and labels properly */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Ensure all labels and input fields are aligned equally */
+label {
+    font-size: 20px;
+    font-weight: 500;
+    width: 40%;
+    text-align: left;
+}
+
+input, select {
+    padding: 12px;
+    font-size: 18px;
+    border: 2px solid #555;
+    background: #333;
+    color: white;
+    border-radius: 6px;
+    width: 60%;
+    font-family: 'Josefin Sans', sans-serif;
+    transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* 🔹 Apply Hover Effect to Input Fields */
+input:hover, select:hover {
+    border-color: #00aaff;
+    box-shadow: 0px 0px 8px rgba(0, 170, 255, 0.7);
+}
+
+input:focus, select:focus {
+    border-color: #00aaff;
+    box-shadow: 0px 0px 12px rgba(0, 170, 255, 0.9);
+    outline: none;
+}
+
+button {
+    background-color: #00aaff;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    margin-top: 20px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    width: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+button:hover {
+    background-color: #0088cc;
+    transform: translateY(-2px);
+}
+
+/* 🔹 Fix: No Blur Effect on Hover */
+.result-box {
+    margin-top: 25px;
+    padding: 20px;
+    background: #333;
+    color: white;
+    border-left: 6px solid #00aaff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* 🔹 Fix: No Blur on Hover */
+.result-box:hover {
+    box-shadow: 0px 0px 12px rgba(0, 170, 255, 0.7);
+    filter: none;
+    text-shadow: none;
+}
+
+.result-box h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #00aaff;
+}
+
+.result-box p {
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 400;
+}
