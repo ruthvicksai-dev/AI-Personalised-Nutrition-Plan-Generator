@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitGenAI - Nutrition Plan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Personalized Nutrition Plan</h2>
+        <form id="nutritionForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" name="weight" required>
+            </div>
+
+            <div class="form-group">
+                <label for="calories">Required Calories:</label>
+                <input type="number" id="calories" name="calories" required>
+            </div>
+
+            <div class="form-group">
+                <label for="preference">Diet Preference:</label>
+                <select id="preference" name="preference" required>
+                    <option value="veg">Vegetarian</option>
+                    <option value="non-veg">Non-Vegetarian</option>
+                    <option value="vegan">Vegan</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="goal">Goal:</label>
+                <select id="goal" name="goal" required>
+                    <option value="muscle_gain">Muscle Gain</option>
+                    <option value="weight_loss">Weight Loss</option>
+                    <option value="maintenance">Maintenance</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="duration">Plan Duration:</label>
+                <select id="duration" name="duration" required>
+                    <option value="1_day">1 Day</option>
+                    <option value="1_week">1 Week</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="avoided">Avoided Items:</label>
+                <input type="text" id="avoided" name="avoided" placeholder="E.g., Nuts, Dairy, Gluten">
+            </div>
+
+            <button type="button" onclick="generateNutrition()">Generate Plan</button>
+        </form>
+
+        <div id="result" class="result-box"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
